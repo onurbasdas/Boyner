@@ -7,7 +7,6 @@
 
 import Foundation
 
-// Haber kaynaklarını temsil eden model
 struct SourceResponseModel: Decodable {
     let status: String
     let sources: [Source]

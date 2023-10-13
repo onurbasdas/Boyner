@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
+        <!--Kaynaklar-->
         <scene sceneID="aYN-pE-ibJ">
             <objects>
                 <viewController id="xau-9e-D5D" customClass="HomeViewController" customModule="Boyner" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,11 +68,11 @@
                             <constraint firstItem="cNS-oA-F7D" firstAttribute="bottom" secondItem="e2C-EU-fY9" secondAttribute="bottom" id="z27-83-K3S"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="SwY-7z-cSS"/>
+                    <navigationItem key="navigationItem" title="Kaynaklar" id="SwY-7z-cSS"/>
                     <connections>
                         <outlet property="homeCollectionView" destination="bjR-sK-nNf" id="RzG-86-X5E"/>
                         <outlet property="homeTableView" destination="cNS-oA-F7D" id="Vau-lP-H0Y"/>
-                        <segue destination="DwP-E8-Ggl" kind="push" id="Pz9-nb-ih2"/>
+                        <segue destination="DwP-E8-Ggl" kind="push" identifier="goToDetailSegue" id="Pz9-nb-ih2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tW1-ZO-Wur" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -86,10 +86,25 @@
                     <view key="view" contentMode="scaleToFill" id="F7K-v4-ZLh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9oG-6X-1Gn">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2zf-kK-eGz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2zf-kK-eGz" firstAttribute="bottom" secondItem="9oG-6X-1Gn" secondAttribute="bottom" id="CWi-2h-Y0g"/>
+                            <constraint firstItem="9oG-6X-1Gn" firstAttribute="leading" secondItem="2zf-kK-eGz" secondAttribute="leading" id="Pe2-QH-C9C"/>
+                            <constraint firstItem="9oG-6X-1Gn" firstAttribute="top" secondItem="2zf-kK-eGz" secondAttribute="top" id="igi-li-wXG"/>
+                            <constraint firstItem="2zf-kK-eGz" firstAttribute="trailing" secondItem="9oG-6X-1Gn" secondAttribute="trailing" id="xe1-sy-aMh"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="fvt-cW-B0h"/>
+                    <connections>
+                        <outlet property="detailTableView" destination="9oG-6X-1Gn" id="pYV-on-CFF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYK-3W-kr2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

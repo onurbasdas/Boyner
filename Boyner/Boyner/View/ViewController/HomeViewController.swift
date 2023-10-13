@@ -13,6 +13,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
     let homeViewModel = HomeViewModel()
+    var selectedSourceID: String?
+    var selectedSourceName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,6 +50,21 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = homeTableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
         cell.bind(source: homeViewModel.sources[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedSourceID = homeViewModel.sources[indexPath.row].id
+        selectedSourceName = homeViewModel.sources[indexPath.row].name
+        self.performSegue(withIdentifier: "goToDetailSegue", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToDetailSegue" {
+            if let destinationViewController = segue.destination as? DetailViewController {
+                destinationViewController.sourceID = selectedSourceID
+                destinationViewController.sourceName = selectedSourceName
+            }
+        }
     }
 }
 
