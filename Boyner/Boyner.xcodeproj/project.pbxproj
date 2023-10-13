@@ -11,13 +11,23 @@
 		8E009D99C58E92CB0EDC643C /* Pods_BoynerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AF7FBA33ECBBAB52EFA52F /* Pods_BoynerTests.framework */; };
 		B93015252AD962A7003D7F0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93015242AD962A7003D7F0F /* AppDelegate.swift */; };
 		B93015272AD962A7003D7F0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93015262AD962A7003D7F0F /* SceneDelegate.swift */; };
-		B93015292AD962A7003D7F0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93015282AD962A7003D7F0F /* ViewController.swift */; };
 		B930152C2AD962A7003D7F0F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B930152A2AD962A7003D7F0F /* Main.storyboard */; };
 		B930152E2AD962B9003D7F0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B930152D2AD962B9003D7F0F /* Assets.xcassets */; };
 		B93015312AD962B9003D7F0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B930152F2AD962B9003D7F0F /* LaunchScreen.storyboard */; };
 		B930153C2AD962B9003D7F0F /* BoynerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B930153B2AD962B9003D7F0F /* BoynerTests.swift */; };
 		B93015462AD962B9003D7F0F /* BoynerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93015452AD962B9003D7F0F /* BoynerUITests.swift */; };
 		B93015482AD962B9003D7F0F /* BoynerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93015472AD962B9003D7F0F /* BoynerUITestsLaunchTests.swift */; };
+		B93015582AD96472003D7F0F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93015572AD96472003D7F0F /* DetailViewController.swift */; };
+		B930155A2AD964A5003D7F0F /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93015592AD964A5003D7F0F /* HomeViewModel.swift */; };
+		B930155C2AD964AD003D7F0F /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B930155B2AD964AD003D7F0F /* DetailViewModel.swift */; };
+		B930155F2AD964C1003D7F0F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B930155E2AD964C1003D7F0F /* Constants.swift */; };
+		B93015612AD964C6003D7F0F /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93015602AD964C6003D7F0F /* Service.swift */; };
+		B96C23DF2AD99A6A009F2718 /* SegmentCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96C23DD2AD99A6A009F2718 /* SegmentCollectionViewCell.swift */; };
+		B96C23E02AD99A6A009F2718 /* SegmentCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B96C23DE2AD99A6A009F2718 /* SegmentCollectionViewCell.xib */; };
+		B9AF742F2AD9674800E11087 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF742E2AD9674800E11087 /* HomeViewController.swift */; };
+		B9AF74322AD967FF00E11087 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF74302AD967FF00E11087 /* HomeTableViewCell.swift */; };
+		B9AF74332AD967FF00E11087 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9AF74312AD967FF00E11087 /* HomeTableViewCell.xib */; };
+		B9AF74372AD96B5D00E11087 /* SourceResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF74362AD96B5D00E11087 /* SourceResponseModel.swift */; };
 		EF8D3009059BE522A6C45383 /* Pods_Boyner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663E6C9041A222561644B6D8 /* Pods_Boyner.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,7 +57,6 @@
 		B93015212AD962A7003D7F0F /* Boyner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boyner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93015242AD962A7003D7F0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B93015262AD962A7003D7F0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B93015282AD962A7003D7F0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B930152B2AD962A7003D7F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B930152D2AD962B9003D7F0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B93015302AD962B9003D7F0F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +66,17 @@
 		B93015412AD962B9003D7F0F /* BoynerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoynerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93015452AD962B9003D7F0F /* BoynerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoynerUITests.swift; sourceTree = "<group>"; };
 		B93015472AD962B9003D7F0F /* BoynerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoynerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B93015572AD96472003D7F0F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		B93015592AD964A5003D7F0F /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B930155B2AD964AD003D7F0F /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		B930155E2AD964C1003D7F0F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B93015602AD964C6003D7F0F /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B96C23DD2AD99A6A009F2718 /* SegmentCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentCollectionViewCell.swift; sourceTree = "<group>"; };
+		B96C23DE2AD99A6A009F2718 /* SegmentCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SegmentCollectionViewCell.xib; sourceTree = "<group>"; };
+		B9AF742E2AD9674800E11087 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B9AF74302AD967FF00E11087 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		B9AF74312AD967FF00E11087 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		B9AF74362AD96B5D00E11087 /* SourceResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceResponseModel.swift; sourceTree = "<group>"; };
 		D6C65D859F2012328982DFF6 /* Pods_Boyner_BoynerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Boyner_BoynerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED85145DC681EF76B7CCFE5A /* Pods-Boyner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boyner.debug.xcconfig"; path = "Target Support Files/Pods-Boyner/Pods-Boyner.debug.xcconfig"; sourceTree = "<group>"; };
 		F8FAB0F8CE556DCE1A327F2A /* Pods-Boyner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Boyner.release.xcconfig"; path = "Target Support Files/Pods-Boyner/Pods-Boyner.release.xcconfig"; sourceTree = "<group>"; };
@@ -101,7 +121,6 @@
 				37606B0045ED740680FEA940 /* Pods-BoynerTests.debug.xcconfig */,
 				0CF12F599CA046C0150897EB /* Pods-BoynerTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +149,7 @@
 		B93015232AD962A7003D7F0F /* Boyner */ = {
 			isa = PBXGroup;
 			children = (
+				B930155D2AD964B5003D7F0F /* Utils */,
 				B93015562AD962E2003D7F0F /* ViewModel */,
 				B93015552AD962DD003D7F0F /* View */,
 				B93015542AD962D2003D7F0F /* Model */,
@@ -163,6 +183,7 @@
 		B93015542AD962D2003D7F0F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B9AF74362AD96B5D00E11087 /* SourceResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,7 +191,8 @@
 		B93015552AD962DD003D7F0F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B93015282AD962A7003D7F0F /* ViewController.swift */,
+				B93015632AD9664A003D7F0F /* Cells */,
+				B93015622AD9663D003D7F0F /* ViewController */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -178,8 +200,39 @@
 		B93015562AD962E2003D7F0F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B93015592AD964A5003D7F0F /* HomeViewModel.swift */,
+				B930155B2AD964AD003D7F0F /* DetailViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B930155D2AD964B5003D7F0F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B930155E2AD964C1003D7F0F /* Constants.swift */,
+				B93015602AD964C6003D7F0F /* Service.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B93015622AD9663D003D7F0F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B9AF742E2AD9674800E11087 /* HomeViewController.swift */,
+				B93015572AD96472003D7F0F /* DetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		B93015632AD9664A003D7F0F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				B9AF74302AD967FF00E11087 /* HomeTableViewCell.swift */,
+				B9AF74312AD967FF00E11087 /* HomeTableViewCell.xib */,
+				B96C23DD2AD99A6A009F2718 /* SegmentCollectionViewCell.swift */,
+				B96C23DE2AD99A6A009F2718 /* SegmentCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		F2F18EAB1E17FC010EF3F342 /* Frameworks */ = {
@@ -301,8 +354,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B96C23E02AD99A6A009F2718 /* SegmentCollectionViewCell.xib in Resources */,
 				B93015312AD962B9003D7F0F /* LaunchScreen.storyboard in Resources */,
 				B930152E2AD962B9003D7F0F /* Assets.xcassets in Resources */,
+				B9AF74332AD967FF00E11087 /* HomeTableViewCell.xib in Resources */,
 				B930152C2AD962A7003D7F0F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -431,9 +486,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B93015292AD962A7003D7F0F /* ViewController.swift in Sources */,
+				B93015612AD964C6003D7F0F /* Service.swift in Sources */,
+				B930155C2AD964AD003D7F0F /* DetailViewModel.swift in Sources */,
 				B93015252AD962A7003D7F0F /* AppDelegate.swift in Sources */,
+				B9AF742F2AD9674800E11087 /* HomeViewController.swift in Sources */,
 				B93015272AD962A7003D7F0F /* SceneDelegate.swift in Sources */,
+				B930155F2AD964C1003D7F0F /* Constants.swift in Sources */,
+				B9AF74322AD967FF00E11087 /* HomeTableViewCell.swift in Sources */,
+				B9AF74372AD96B5D00E11087 /* SourceResponseModel.swift in Sources */,
+				B96C23DF2AD99A6A009F2718 /* SegmentCollectionViewCell.swift in Sources */,
+				B930155A2AD964A5003D7F0F /* HomeViewModel.swift in Sources */,
+				B93015582AD96472003D7F0F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +680,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QJS4FJ5R3Z;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Boyner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -647,6 +711,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QJS4FJ5R3Z;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Boyner/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

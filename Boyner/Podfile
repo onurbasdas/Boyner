@@ -8,6 +8,8 @@ target 'Boyner' do
   # Pods for Boyner
 
   pod 'Alamofire'
+  pod 'Kingfisher'
+
 
   target 'BoynerTests' do
     inherit! :search_paths
