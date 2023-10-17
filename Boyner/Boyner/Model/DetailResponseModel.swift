@@ -37,6 +37,7 @@ struct DetailArticles : Codable {
     let urlToImage : String?
     let publishedAt : String?
     let content : String?
+    var isSelected: Bool = false
 
     enum CodingKeys: String, CodingKey {
 

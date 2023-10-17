@@ -8,6 +8,10 @@
 import UIKit
 import Kingfisher
 
+protocol DetailTableViewCellDelegate: AnyObject {
+    func didSelectReadBtn(cell: DetailTableViewCell)
+}
+
 class DetailTableViewCell: UITableViewCell {
     
     static let identifier = "DetailTableViewCell"
@@ -20,9 +24,12 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet weak var detailReadBtn: UIButton!
     @IBOutlet weak var detailPubDate: UILabel!
     
+    var isInReadList: Bool = false
+    //    var articleID: String = ""
+    weak var delegate: DetailTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        detailReadBtn.setTitle("Okuma Listesine Ekle", for: .normal)
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -34,22 +41,19 @@ class DetailTableViewCell: UITableViewCell {
         detailImage.kf.setImage(with: url)
         detailTitle.text = data.title
         let dateString = data.publishedAt ?? ""
-        if let date = iso8601DateFormatter.date(from: dateString) {
-            let timeFormatter = DateFormatter()
-            timeFormatter.dateFormat = "HH:mm:ss"
-            detailPubDate.text = timeFormatter.string(from: date)
-        }
+        Utils.shared.getDate(label: detailPubDate, dateStr: dateString)
+        configureButton(isSelected: data.isSelected)
     }
     
     @IBAction func detailReadBtnPressed(_ sender: UIButton) {
-        
+        delegate?.didSelectReadBtn(cell: self)
     }
     
-    lazy var iso8601DateFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss'Z'"
-        formatter.locale = Locale(identifier: "en_US_POSIX")
-        formatter.timeZone = TimeZone(secondsFromGMT: 0)
-        return formatter
-    }()
+    func configureButton(isSelected: Bool) {
+        if isSelected{
+            detailReadBtn.setTitle("Okuma Listesine Çıkar", for: .normal)
+        } else {
+            detailReadBtn.setTitle("Okuma Listesinden Ekle", for: .normal)
+        }
+    }
 }

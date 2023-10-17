@@ -23,7 +23,7 @@ class HomeViewController: UIViewController {
     }
     
     func getData() {
-        homeViewModel.getData { 
+        homeViewModel.getData {
             DispatchQueue.main.async { [self] in
                 homeTableView.reloadData()
                 homeCollectionView.reloadData()
@@ -38,6 +38,9 @@ class HomeViewController: UIViewController {
         homeCollectionView.dataSource = self
         homeTableView.register(HomeTableViewCell.nib(), forCellReuseIdentifier: HomeTableViewCell.identifier)
         homeCollectionView.register(SegmentCollectionViewCell.nib(), forCellWithReuseIdentifier: SegmentCollectionViewCell.identifier)
+        if let navigationBar = navigationController?.navigationBar {
+            navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        }
     }
 }
 

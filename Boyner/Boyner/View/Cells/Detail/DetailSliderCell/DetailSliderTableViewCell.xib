@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DetailSliderTableViewCell" id="KGk-i7-Jjw" customClass="DetailSliderTableViewCell" customModule="Boyner" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="340" height="350"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="340" height="350"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlQ-M9-4e4">
+                        <rect key="frame" x="0.0" y="0.0" width="340" height="350"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Xcp-9Q-uCU">
+                                <rect key="frame" x="0.0" y="0.0" width="340" height="324"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="3qS-YC-kmb">
+                                    <size key="itemSize" width="340" height="300"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="R6M-3s-c7s">
+                                <rect key="frame" x="0.0" y="324" width="340" height="26"/>
+                                <color key="pageIndicatorTintColor" systemColor="systemGrayColor"/>
+                                <color key="currentPageIndicatorTintColor" name="AccentColor"/>
+                            </pageControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="R6M-3s-c7s" secondAttribute="bottom" id="1cm-5v-RKZ"/>
+                            <constraint firstAttribute="trailing" secondItem="Xcp-9Q-uCU" secondAttribute="trailing" id="Cxc-dY-8Iz"/>
+                            <constraint firstItem="R6M-3s-c7s" firstAttribute="top" secondItem="Xcp-9Q-uCU" secondAttribute="bottom" id="ElY-1I-ZbZ"/>
+                            <constraint firstItem="Xcp-9Q-uCU" firstAttribute="top" secondItem="NlQ-M9-4e4" secondAttribute="top" id="TFs-qR-Odf"/>
+                            <constraint firstAttribute="trailing" secondItem="R6M-3s-c7s" secondAttribute="trailing" id="g7b-6H-hmW"/>
+                            <constraint firstItem="R6M-3s-c7s" firstAttribute="leading" secondItem="NlQ-M9-4e4" secondAttribute="leading" id="lea-uO-I8a"/>
+                            <constraint firstItem="Xcp-9Q-uCU" firstAttribute="leading" secondItem="NlQ-M9-4e4" secondAttribute="leading" id="qjJ-Ti-X0p"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="NlQ-M9-4e4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="AHC-bf-FnN"/>
+                    <constraint firstAttribute="trailing" secondItem="NlQ-M9-4e4" secondAttribute="trailing" id="MGc-P2-ny8"/>
+                    <constraint firstItem="NlQ-M9-4e4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pY9-x8-Aoe"/>
+                    <constraint firstAttribute="bottom" secondItem="NlQ-M9-4e4" secondAttribute="bottom" id="vDo-Ze-HoX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="detailSliderCollectionView" destination="Xcp-9Q-uCU" id="nGF-GF-0Ga"/>
+                <outlet property="detailSliderPageControl" destination="R6M-3s-c7s" id="26U-Hd-dQF"/>
+            </connections>
+            <point key="canvasLocation" x="39.694656488549619" y="-12.67605633802817"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

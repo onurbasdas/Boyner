@@ -8,9 +8,9 @@
 import Foundation
 
 class HomeViewModel {
+    
     var sources: [Source] = []
     let service = Service()
-    
     
     func getData(completion: @escaping () -> Void) {
         service.getSources { [self] source in

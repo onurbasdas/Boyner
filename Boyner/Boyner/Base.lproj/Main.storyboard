@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -19,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="cNS-oA-F7D">
-                                <rect key="frame" x="0.0" y="153" width="393" height="665"/>
+                                <rect key="frame" x="0.0" y="153" width="393" height="699"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GN8-51-GxL">
@@ -57,7 +58,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e2C-EU-fY9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
                             <constraint firstItem="GN8-51-GxL" firstAttribute="leading" secondItem="e2C-EU-fY9" secondAttribute="leading" id="8jd-ZP-nWG"/>
                             <constraint firstItem="GN8-51-GxL" firstAttribute="top" secondItem="e2C-EU-fY9" secondAttribute="top" id="9qV-qr-Y1V"/>
@@ -65,7 +66,7 @@
                             <constraint firstItem="cNS-oA-F7D" firstAttribute="trailing" secondItem="e2C-EU-fY9" secondAttribute="trailing" id="Ffz-RU-3AM"/>
                             <constraint firstItem="cNS-oA-F7D" firstAttribute="leading" secondItem="e2C-EU-fY9" secondAttribute="leading" id="oda-OR-QEg"/>
                             <constraint firstItem="e2C-EU-fY9" firstAttribute="trailing" secondItem="GN8-51-GxL" secondAttribute="trailing" id="vro-82-nlX"/>
-                            <constraint firstItem="cNS-oA-F7D" firstAttribute="bottom" secondItem="e2C-EU-fY9" secondAttribute="bottom" id="z27-83-K3S"/>
+                            <constraint firstItem="cNS-oA-F7D" firstAttribute="bottom" secondItem="qS4-SI-Mjr" secondAttribute="bottom" id="z27-83-K3S"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Kaynaklar" id="SwY-7z-cSS"/>
@@ -88,16 +89,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9oG-6X-1Gn">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="2zf-kK-eGz"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
-                            <constraint firstItem="2zf-kK-eGz" firstAttribute="bottom" secondItem="9oG-6X-1Gn" secondAttribute="bottom" id="CWi-2h-Y0g"/>
                             <constraint firstItem="9oG-6X-1Gn" firstAttribute="leading" secondItem="2zf-kK-eGz" secondAttribute="leading" id="Pe2-QH-C9C"/>
                             <constraint firstItem="9oG-6X-1Gn" firstAttribute="top" secondItem="2zf-kK-eGz" secondAttribute="top" id="igi-li-wXG"/>
+                            <constraint firstAttribute="bottom" secondItem="9oG-6X-1Gn" secondAttribute="bottom" id="ih4-JY-gK7"/>
                             <constraint firstItem="2zf-kK-eGz" firstAttribute="trailing" secondItem="9oG-6X-1Gn" secondAttribute="trailing" id="xe1-sy-aMh"/>
                         </constraints>
                     </view>
@@ -108,7 +109,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYK-3W-kr2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2752" y="-44"/>
+            <point key="canvasLocation" x="2751.9083969465646" y="-44.366197183098592"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B3n-pQ-jDz">
@@ -118,6 +119,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kEA-0U-BiL">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -130,6 +132,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
